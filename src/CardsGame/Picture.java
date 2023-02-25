@@ -25,7 +25,7 @@ public enum Picture {
 
         for (Picture picture:Picture.values()){
             if (picture==Picture.joker||picture==Picture.back){
-                String filename = picture==Picture.joker?"prmn2022a/src/CardsGame/cards/card_joker.png":"prmn2022a/src/CardsGame/cards/card_back.png";
+                String filename = picture==Picture.joker?"src/CardsGame/cards/card_joker.png":"src/CardsGame/cards/card_back.png";
                 try{
                     file=new File(filename);
                     bufferedImage= ImageIO.read(file);
@@ -48,8 +48,8 @@ public enum Picture {
             else {
             for (int i=1;i<=13;i++){
                 String filename;
-                if (i<10)filename="prmn2022a/src/CardsGame/cards/card_"+picture+"_"+0+i+".png";
-                else filename="prmn2022a/src/CardsGame/cards/card_"+picture+"_"+i+".png";
+                if (i<10)filename="src/CardsGame/cards/card_"+picture+"_"+0+i+".png";
+                else filename="src/CardsGame/cards/card_"+picture+"_"+i+".png";
                 try {
                     file = new File(filename);
                     bufferedImage = ImageIO.read(file);
